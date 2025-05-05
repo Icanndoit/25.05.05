@@ -1,0 +1,14 @@
+lst, size = [], int(input())
+
+i, top = size, size - 1
+while i != 0:
+    lst.append(i)
+    i -= 1
+
+while top != 0:
+    del lst[top]
+    top -= 1
+    lst.insert(0, lst[top])
+    del lst[len(lst) - 1]
+
+print(lst[top])
